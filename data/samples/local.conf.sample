@@ -330,6 +330,3 @@ require wrlinux-distro/conf/distro/include/wrlinux-uninative.inc
 
 # Add settings for all distros
 require conf/distro/include/all-distro-settings.inc
-
-# Exclude buildtools dir from pseudo database to fix do_package failure
-PSEUDO_IGNORE_PATHS .= ",##OEROOT##/bin"
