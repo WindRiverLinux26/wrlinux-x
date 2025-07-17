@@ -8,8 +8,7 @@ PR = "r1"
 
 SRC_URI = "file://hello.c"
 
-S = "${WORKDIR}/sources"
-UNPACKDIR = "${S}"
+S = "${UNPACKDIR}"
 
 do_compile() {
   ${CC} ${CFLAGS} ${LDFLAGS} -o hello hello.c
