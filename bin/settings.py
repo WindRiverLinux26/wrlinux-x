@@ -70,5 +70,5 @@ REQUIRED_HOSTTOOLS = """
     ranlib readelf readlink realpath rm rmdir rpcgen sed seq sh sha1sum
     sha224sum sha256sum sha384sum sha512sum sleep sort split stat
     strings strip tail tar tee test touch tr true truncate uname uniq
-    unzstd wc wget which xargs zstd
+    unzstd wc wget which xargs xz zstd
 """
