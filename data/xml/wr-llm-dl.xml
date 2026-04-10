@@ -1,0 +1,2 @@
+    <project name="layers/wr-llm-dl-5.1" remote="base" path="layers/wr-llm-dl"/>
+    <project name="layers/wr-llm-gitshallow-dl-5.1" remote="base" path="layers/wrlinux-src-dl/wr-llm-gitshallow-dl"/>
