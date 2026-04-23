@@ -1,4 +1,4 @@
-# Copyright (C) 2016-2019 Wind River Systems, Inc.
+# Copyright (C) 2016-2026 Wind River Systems, Inc.
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License version 2 as
@@ -18,8 +18,7 @@
 BUILDTOOLS_EXT_VERSION=${BUILDTOOLS_EXT_VERSION:-10.25.49.0}
 
 # Special windshare folders to search
-BUILDTOOLS_FOLDERS="WRLinux-CD-Core"
-
+BUILDTOOLS_FOLDERS="WRLinux-lts-26-Core"
 BUILDTOOLS_BASEURL="${BUILDTOOLS_BASEURL:-$BASEURL}"
 
 # Where to install the build tools
