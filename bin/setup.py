@@ -348,10 +348,10 @@ class Setup():
             else:
                 self.use_mirror_as_premirrors()
 
-        #if self.devel_patches:
+        #if self.devel_patches != 'NULL':
         #    self.do_devel_patches()
 
-        if self.hotfix:
+        if self.hotfix != 'NULL':
             self.devel_patches = ''
             self.do_devel_patches()
 
