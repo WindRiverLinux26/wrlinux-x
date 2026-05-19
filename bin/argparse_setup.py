@@ -218,7 +218,7 @@ class Argparse_Setup:
         # NULL: Not specified
         # --devel-patches: Specified without a url, use the default url
         # --devel-patches=url: Use the url to download patches
-        devel_patches_default_url = ''
+        devel_patches_default_url = 'https://distro.windriver.com/dist/wrlinux/updates/lts-26'
 #        if self.setup:
 #            self.setup.devel_patches = parsed_args.devel_patches
 #            if self.setup.devel_patches == "NULL":
