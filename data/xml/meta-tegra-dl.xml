@@ -1,1 +1,3 @@
     <project name="layers/meta-tegra-gitshallow-dl-6.0" remote="base" path="layers/wrlinux-src-dl/meta-tegra-gitshallow-dl"/>
+    <project name="layers/meta-tegra-dl-6.0" remote="base" path="layers/meta-tegra-dl"/>
+    <project name="layers/meta-tegra-community-gitshallow-dl-6.0" remote="base" path="layers/wrlinux-src-dl/meta-tegra-community-gitshallow-dl"/>
