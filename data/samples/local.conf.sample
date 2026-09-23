@@ -201,6 +201,7 @@ USER_CLASSES ?= "buildstats"
 #   - 'tar.gz' to create a gzip compressed tarball of the image
 #   - 'tar.bz2' to create a bz2 compressed tarball of the image
 #   - 'ext4' to create an ext4 image
+#   - 'wic.zst' to create a Zstandard compressed WIC image
 #
 # NOTE:
 # Due to the way the OpenEmbedded build system processes this variable,
