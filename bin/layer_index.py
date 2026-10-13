@@ -26,6 +26,8 @@ import logger_setup
 
 import utils_setup
 
+import settings
+
 import texttable as tt
 
 # type, url/path, description, cache
@@ -835,6 +837,12 @@ class Layer_Index():
                 return vers['name'].split()
         return []
 
+    def get_machine_support(self, machine_name):
+        # Check the release-specific Wind River supported machines.
+        if machine_name in settings.WR_SUPPORTED_MACHINES:
+            return "Wind River"
+        return "Community"
+
     def list_obj(self, base_branch, object, display, compat='all'):
         for lindex in self.index:
             logger.plain ('Index: %s' % (lindex['CFG']['DESCRIPTION'] or lindex['CFG']['URL']))
@@ -846,12 +854,14 @@ class Layer_Index():
             table.header(['display', 'description', 'layer'])
             table.set_cols_dtype(['t', 't', 't'])
             table.set_max_width(100)
+
             branchid = self.getBranchId(lindex, self.getIndexBranch(default=base_branch, lindex=lindex))
             if branchid:
                 # there are more layerBranches then objects (usually)...
                 for lb in lindex['layerBranches']:
                     if compat != 'all':
-                        if compat not in self.getYPCompatibleVersion(lindex, lb['yp_compatible_version']):
+                        if compat not in self.getYPCompatibleVersion(
+                            lindex, lb['yp_compatible_version']):
                             continue
                     for layer in self.find_layer(lindex, layerBranch=lb):
                         for obj in lindex[object]:
@@ -859,6 +869,9 @@ class Layer_Index():
                                 lname = layer['name']
                                 name = obj['name']
                                 description = (obj['description'] or name).strip()
+                                if object == 'machines' and compat != 'all':
+                                    if self.get_machine_support(name) != 'Wind River':
+                                        continue
                                 table.add_row([name, description, lname])
                 s = table.draw()
                 logger.plain(s)

@@ -58,6 +58,25 @@ REMOTES = [
 # filter
 DEFAULT_LAYER_COMPAT_TAG = "wrl"
 
+# Wind River-Supported machines for WRLINUX_10_26_LTS.
+# Used by the default --list-machines output.
+WR_SUPPORTED_MACHINES = {
+    # Silicon BSPs
+    "amd-zynqmp",
+    "bcm-2xxx-rpi4",
+    "bcm-2xxx-rpi5",
+    "intel-x86-64",
+    "nvidia-orin-agx",
+    "nxp-imx9",
+
+    # QEMU machines
+    "qemuarm",
+    "qemuarm64",
+    "qemux86",
+    "qemux86-64",
+    "qemuriscv64",
+}
+
 # required host tools to build out project
 # Do not edit this manually, it is updated automatically.
 REQUIRED_HOSTTOOLS = """
